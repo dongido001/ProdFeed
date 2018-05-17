@@ -1,0 +1,43 @@
+
+<style>
+   .feed {
+       padding: 2px 10px;
+       background-color:#6c757d;
+       margin: 4px; 
+       color:aliceblue;
+       border-radius: 3px;
+   }
+</style>
+
+<div class="row">
+    <div class="col">
+        <div class="container" style="padding: 40px;">
+            <h4 class="text-center">Feeds</h4>
+            <div id="feeds">
+                <!-- feeds -->
+            </div>
+        </div>
+     </div>
+</div>
+
+<script src="https://js.pusher.com/4.2/pusher.min.js"></script>
+
+<script type="text/javascript">
+    const pusher = new Pusher('9c81928de3b4f4c19599', {
+        cluster: 'eu'
+    });
+
+    const channel = pusher.subscribe('feed');
+
+
+    channel.bind('new_feed', function(data) {
+      $("#feeds").append(`
+          <div class="feed">
+              <div class="feed" style="margin-bottom: 5px;">
+                  ${data.message}
+              </div>
+          </div>
+      `);
+    });
+
+</script>

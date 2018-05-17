@@ -1,0 +1,116 @@
+
+@model IEnumerable<ProdFeed.Models.Product>
+
+<div class="row">
+    <div class="col">
+        <div style="padding: 40px;">
+            <h4 class="text-center">Add product</h4>
+            <form method="POST" action="/product/Create">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      name="Name" 
+                      id="name" 
+                      placeholder="Gala"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="product_name">($)Price</label>
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      name="Price" 
+                      id="Price"
+                      placeholder="10"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="status">Availability</label>
+                    <select class="form-control" id="Status" name="Status">
+                        <option value="true">In stock</option>
+                        <option value="false">Out of Stock</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea 
+                      class="form-control" 
+                      id="description" 
+                      name="Description" 
+                      rows="3"
+                    ></textarea>
+                </div>
+                <button 
+                  type="submit" 
+                  role="submit" 
+                  class="btn btn-secondary btn-lg btn-block"
+                >
+                  Add Product
+                </button>
+            </form>
+        </div>
+     </div>
+    <div class="col">
+        <div class="products" style="padding: 40px;">
+            <h4 class="text-center">Products</h4>
+            @foreach (var product in Model) {
+                <div class="product">
+                    <div class="card" style="margin-bottom: 5px;">
+                        <img 
+                          class="card-img-top" 
+                          height="250"
+                          src="https://www.africalinked.com/images/product-default.png" 
+                          alt="Product image"
+                        >
+                        <div class="card-body">
+                          <h5 class="card-title">@product.Name</h5>
+                          <p class="card-text">@product.Description</p>
+                          <p class="card-text">$@product.Price</p>
+                           @if (product.Status) {
+                             <span style="color: green">In Stock</span>
+                           } else {
+                             <span style="color: red"> Out of Stock  </span>
+                           }
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                               <div class="col">
+                                  <a 
+                                    type="link"
+                                    asp-controller="Product"
+                                    asp-route-id="@product.ID"
+                                    asp-action="Delete"
+                                    role="button"
+                                    class="btn btn-secondary btn-lg btn-block"
+                                  >
+                                   Delete
+                                  </a>
+                                </div>
+                                <div class="col">
+                                  <a
+                                    type="link"
+                                    asp-controller="Product"
+                                    asp-route-id="@product.ID"
+                                    asp-action="ChangeStatus"
+                                    role="button"
+                                    class="btn btn-secondary btn-lg btn-block"
+                                  >
+                                  @if (!product.Status) {
+                                    <span>In stock</span>
+                                  }
+                                  else
+                                  {
+                                    <span>Out of Stock</span>
+                                  }
+                                  </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+     </div>
+</div>

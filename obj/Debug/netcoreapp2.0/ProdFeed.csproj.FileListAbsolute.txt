@@ -1,0 +1,11 @@
+/Users/dongido/Desktop/ProdFeed/bin/Debug/netcoreapp2.0/ProdFeed.deps.json
+/Users/dongido/Desktop/ProdFeed/bin/Debug/netcoreapp2.0/ProdFeed.runtimeconfig.json
+/Users/dongido/Desktop/ProdFeed/bin/Debug/netcoreapp2.0/ProdFeed.runtimeconfig.dev.json
+/Users/dongido/Desktop/ProdFeed/bin/Debug/netcoreapp2.0/ProdFeed.dll
+/Users/dongido/Desktop/ProdFeed/bin/Debug/netcoreapp2.0/ProdFeed.pdb
+/Users/dongido/Desktop/ProdFeed/obj/Debug/netcoreapp2.0/ProdFeed.csprojAssemblyReference.cache
+/Users/dongido/Desktop/ProdFeed/obj/Debug/netcoreapp2.0/ProdFeed.csproj.CoreCompileInputs.cache
+/Users/dongido/Desktop/ProdFeed/obj/Debug/netcoreapp2.0/ProdFeed.AssemblyInfoInputs.cache
+/Users/dongido/Desktop/ProdFeed/obj/Debug/netcoreapp2.0/ProdFeed.AssemblyInfo.cs
+/Users/dongido/Desktop/ProdFeed/obj/Debug/netcoreapp2.0/ProdFeed.dll
+/Users/dongido/Desktop/ProdFeed/obj/Debug/netcoreapp2.0/ProdFeed.pdb
