@@ -1,6 +1,6 @@
 # How to build an activity feed using .NET
 
-This is a demo application showing how to build an activity feed using ASP.NET Core MVC and Pusher. You can read the tutorial on how it was built [here](https://pusher.com)
+This is a demo application showing how to build an activity feed using ASP.NET Core MVC and Pusher. You can read the tutorial on how it was built [here](https://pusher.com/tutorials/activity-feed-dotnet)
 
 ## Getting Started
 
